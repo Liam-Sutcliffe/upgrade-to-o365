@@ -7,4 +7,6 @@ curl -o C:\office\OffScrubc2r.vbs "https://raw.githubusercontent.com/OfficeDev/O
 curl -o C:\office\Office2013Setup.exe "https://raw.githubusercontent.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls/Office2013Setup.exe"
 curl -o C:\office\Office2016Setup.exe "https://raw.githubusercontent.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls/Office2016Setup.exe"
 curl -o C:\office\Remove-PreviousOfficeInstalls.ps1 "https://raw.githubusercontent.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls/Remove-PreviousOfficeInstalls.ps1"
+powershell -executionpolicy bypass c:\office\Logoff.ps1
 powershell -executionpolicy bypass c:\office\Remove-PreviousOfficeInstalls.ps1
+powershell -executionpolicy bypass c:\office\Install.ps1
