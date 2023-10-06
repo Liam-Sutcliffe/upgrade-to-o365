@@ -15,7 +15,16 @@ curl -o C:\office\Remove-PreviousOfficeInstalls.ps1 "https://raw.githubuserconte
 curl -o C:\office\ODTSetup.exe "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/ODTSetup.exe"
 curl -o C:\office\Office365Install\configuration-Office365-x64.xml "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/Office365Install/configuration-Office365-x64.xml"
 curl -o C:\office\Office365Install\setup.exe "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/33d085ed945b324a14543d58e9f2127aae800804/Office365Install/setup.exe"
-powershell -Command "Start-Sleep -Seconds 900"
+powershell -Command "Start-Sleep -Seconds 180"
+powershell -Command "write-output "3minutes passed""
+powershell -Command "Start-Sleep -Seconds 180"
+powershell -Command "write-output "6minutes passed""
+powershell -Command "Start-Sleep -Seconds 180"
+powershell -Command "write-output "9minutes passed""
+powershell -Command "Start-Sleep -Seconds 180"
+powershell -Command "write-output "12minutes passed""
+powershell -Command "Start-Sleep -Seconds 180"
+powershell -Command "write-output "15minutes passed""
 powershell -executionpolicy bypass c:\office\Logoff.ps1
 powershell -executionpolicy bypass c:\office\Remove-PreviousOfficeInstalls.ps1
 powershell -executionpolicy bypass c:\office\Install.ps1
