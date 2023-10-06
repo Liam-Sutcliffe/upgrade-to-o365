@@ -18,5 +18,4 @@ curl -o C:\office\Office365Install\setup.exe "https://raw.githubusercontent.com/
 timeout /t 20
 powershell -executionpolicy bypass c:\office\Logoff.ps1
 powershell -executionpolicy bypass c:\office\Remove-PreviousOfficeInstalls.ps1
-timeout /t 20
 powershell -executionpolicy bypass c:\office\Install.ps1
