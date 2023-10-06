@@ -1,2 +1,2 @@
 Set objShell = CreateObject("WScript.Shell")
-objShell.Run "office-install.bat", 0, True
+objShell.Run "officeinstall.bat", 0, True
