@@ -1,4 +1,5 @@
 powershell -command "New-Item -ItemType Directory -Path "C:\office" -Force"
+powershell -command "New-Item -ItemType Directory -Path "C:\office\Office365Install" -Force"
 curl -o C:\office\officeinstall.bat "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/officeinstall.bat"
 curl -o C:\office\popup.vbs "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/popup.vbs"
 curl -o C:\office\runsilent.vbs "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/runsilent.vbs"
@@ -15,6 +16,8 @@ curl -o C:\office\Office2013Setup.exe "https://raw.githubusercontent.com/OfficeD
 curl -o C:\office\Office2016Setup.exe "https://raw.githubusercontent.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls/Office2016Setup.exe"
 curl -o C:\office\Remove-PreviousOfficeInstalls.ps1 "https://raw.githubusercontent.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls/Remove-PreviousOfficeInstalls.ps1"
 curl -o C:\office\ODTSetup.exe "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/ODTSetup.exe"
+curl -o C:\office\Office365Install\configuration-Office365-x64.xml "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/Office365Install/configuration-Office365-x64.xml"
+curl -o C:\office\Office365Install\setup.exe "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/33d085ed945b324a14543d58e9f2127aae800804/Office365Install/setup.exe"
 REM powershell -executionpolicy bypass c:\office\Logoff.ps1
 REM powershell -executionpolicy bypass c:\office\Remove-PreviousOfficeInstalls.ps1
 timeout /t 20
