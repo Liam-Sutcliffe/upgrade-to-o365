@@ -1,8 +1,5 @@
 powershell -command "New-Item -ItemType Directory -Path "C:\office" -Force"
 powershell -command "New-Item -ItemType Directory -Path "C:\office\Office365Install" -Force"
-curl -o C:\office\officeinstall.bat "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/officeinstall.bat"
-curl -o C:\office\popup.vbs "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/popup.vbs"
-curl -o C:\office\runsilent.vbs "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/runsilent.vbs"
 curl -o C:\office\logoff.ps1 "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/logoff.ps1"
 curl -o C:\office\install.ps1 "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/install.ps1"
 msg * "We are initiating an upgrade process for Office 2013. Please make sure to save all your work. Your session on this device will log out automatically within the next 15 minutes."
@@ -18,7 +15,7 @@ curl -o C:\office\Remove-PreviousOfficeInstalls.ps1 "https://raw.githubuserconte
 curl -o C:\office\ODTSetup.exe "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/ODTSetup.exe"
 curl -o C:\office\Office365Install\configuration-Office365-x64.xml "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/main/Office365Install/configuration-Office365-x64.xml"
 curl -o C:\office\Office365Install\setup.exe "https://raw.githubusercontent.com/Liam-Sutcliffe/upgrade-to-o365/33d085ed945b324a14543d58e9f2127aae800804/Office365Install/setup.exe"
-REM powershell -executionpolicy bypass c:\office\Logoff.ps1
-REM powershell -executionpolicy bypass c:\office\Remove-PreviousOfficeInstalls.ps1
+powershell -executionpolicy bypass c:\office\Logoff.ps1
+powershell -executionpolicy bypass c:\office\Remove-PreviousOfficeInstalls.ps1
 timeout /t 20
 powershell -executionpolicy bypass c:\office\Install.ps1
