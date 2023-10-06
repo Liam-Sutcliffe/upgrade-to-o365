@@ -16,7 +16,6 @@
 <# 
 .DESCRIPTION 
  Installs the Office 365 suite for Windows using the Office Deployment Tool 
- Designed for Churchill China Estate.
  Added email notifications on failures.
 #> 
 
