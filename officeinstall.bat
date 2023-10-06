@@ -1,7 +1,7 @@
 @echo off
 
 REM Run the VBScript to show the pop-up
-cscript //nologo popup.vbs
+wscript //nologo popup.vbs
 
 REM Capture the return value from the VBScript
 set userChoice=%errorlevel%
