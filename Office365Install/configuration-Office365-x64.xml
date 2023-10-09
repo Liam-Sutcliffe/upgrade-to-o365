@@ -18,6 +18,7 @@
       <Language ID="en-us" />
     </Product>
   </Add>
+  <Property Name="SharedComputerLicensing" Value="1" />
 
   <!--  <Updates Enabled="TRUE" Channel="Current" /> -->
 
