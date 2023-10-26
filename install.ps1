@@ -27,8 +27,8 @@ Param(
   [Parameter(ParameterSetName = "NoXML")][Switch]$DisplayInstall = $False,
   [Parameter(ParameterSetName = "NoXML")][ValidateSet("Groove","Outlook","OneNote","Access","OneDrive","Publisher","Word","Excel","PowerPoint","Teams","Lync")][Array]$ExcludeApps,
   [Parameter(ParameterSetName = "NoXML")][ValidateSet("64","32")]$OfficeArch = "64",
-  [Parameter(ParameterSetName = "NoXML")][ValidateSet("O365ProPlusRetail","O365BusinessRetail")]$OfficeEdition = "O365BusinessRetail",
-  [Parameter(ParameterSetName = "NoXML")][ValidateSet(0,1)]$SharedComputerLicensing = "1",
+  [Parameter(ParameterSetName = "NoXML")][ValidateSet("O365ProPlusRetail","O365BusinessRetail")]$OfficeEdition = "O365ProPlusRetail",
+  [Parameter(ParameterSetName = "NoXML")][ValidateSet(0,1)]$SharedComputerLicensing = "0",
   [Parameter(ParameterSetName = "NoXML")][ValidateSet("TRUE","FALSE")]$EnableUpdates = "TRUE",
   [Parameter(ParameterSetName = "NoXML")][String]$LoggingPath,
   [Parameter(ParameterSetName = "NoXML")][String]$SourcePath,
@@ -106,6 +106,7 @@ Function Generate-XMLFile{
         </Add>  
         <Property Name="PinIconsToTaskbar" Value="$PinItemsToTaskbar" />
         <Property Name="SharedComputerLicensing" Value="$SharedComputerlicensing" />
+        <Property Name="DeviceBasedLicensing" Value="1" />
         <Display Level="$SilentInstallString" AcceptEULA="$AcceptEULA" />
         <Updates Enabled="$EnableUpdates" />
         $RemoveMSIString
