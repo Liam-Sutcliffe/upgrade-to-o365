@@ -27,7 +27,9 @@ write-output "12minutes passed"
 Start-Sleep -Seconds 180
 write-output "15minutes passed"
 powershell -executionpolicy bypass c:\office\Logoff.ps1
+msg * "The upgrade to Office 365 is now underway. You will be notified when the installation is complete and it's okay to log back into the device. ETA 30 Minutes. Thank you for your patience."
 powershell -executionpolicy bypass c:\office\Remove-PreviousOfficeInstalls.ps1
 powershell -executionpolicy bypass c:\office\Install.ps1
+msg * "Office 365 Installation complete! You may now log back into your device and use it as normal. Please report any issues directly to the IT Service Desk. Thank you."
 Start-Sleep -Seconds 5
 Get-ChildItem -Path "C:\office\*" | Remove-Item -Recurse -ErrorAction SilentlyContinue
